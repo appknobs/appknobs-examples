@@ -1,0 +1,18 @@
+{
+  "name": "react-legacy-context",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html --open"
+  },
+  "dependencies": {
+    "react": "15.0.0",
+    "react-dom": "15.0.0",
+    "@appknobs/react": "*",
+    "@appknobs/client": "*"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.10.3"
+  }
+}

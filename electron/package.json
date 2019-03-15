@@ -1,0 +1,15 @@
+{
+  "name": "electron-example",
+  "version": "0.0.0",
+  "description": "An Electron example based on electron-quick-start",
+  "main": "main.js",
+  "scripts": {
+    "start": "cp ../config.js . && electron ."
+  },
+  "dependencies": {
+    "@appknobs/client": "*"
+  },
+  "devDependencies": {
+    "electron": "^4.0.6"
+  }
+}

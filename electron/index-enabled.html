@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Electron with Appknobs</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel='stylesheet' href='style.css' />
+</head>
+
+<body class="d-flex flex-column h-100">
+  <main role="main" class="flex-shrink-0">
+    <div class="splash p-3 p-md-5 m-md-3 text-center bg-light">
+      <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">Enabled 👏</h1>
+        <p class="lead font-weight-normal">You have access to the feature hece we show you this welcome screen</p>
+        <a class="btn btn-primary" href="#">Get started</a>
+      </div>
+    </div>
+  </main>
+  <footer class="footer mt-auto py-3">
+    <div class="container text-center">
+      <span class="text-muted">
+        <span>Features fetched in render stage:</span>
+        <code id='features'></code>
+      </span>
+    </div>
+  </footer>
+  <script>
+    require('./renderer.js')
+  </script>
+</body>
+
+</html>
