@@ -55,27 +55,6 @@ yarn
 yarn start
 ```
 
-## React Native
-
-Make sure you have [set up your environment](https://facebook.github.io/react-native/docs/getting-started.html) for either iOS or Android
-
-```
-cd react-native
-yarn // or npm install
-```
-
-then
-
-```
-yarn ios
-```
-
-or start and Android emulator and
-
-```
-yarn android
-```
-
 ## Electron
 
 A minimal implementation using Electron to demonstrate fetching available features in both the main and renderer process, using `newElectronClient` and `newBrowserClient` respectively.
