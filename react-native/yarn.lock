@@ -2,21 +2,21 @@
 # yarn lockfile v1
 
 
-"@appknobs/react@*":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@appknobs/react/-/react-0.2.0.tgz#df62406553b128b53b7bf98c8a40de171f4331b0"
-  integrity sha512-End+G0txNFqjSzCPHIzLVAGmJaJrFo8yqkydF8KkCwEFZjth/SMb8vGPT6YOkYXDM0Y8ZloM4ENVLeGG5oHw7A==
+"@appknobs/client@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@appknobs/client/-/client-0.4.2.tgz#98352ce9c2a8fc863b872ea56a8f87f17edc0061"
+  integrity sha512-Bdj0FRK0Nyy0iaFFiYB2RQ3aKlcyOCSMu3KU6QlOgooherigpeplg++ebvokkhorsrMp8INwLvGzqp00L7CHvA==
   dependencies:
-    "@appknobs/services-client" "^0.2.0"
+    cross-fetch "^3.0.1"
+    electron-fetch "^1.3.0"
+
+"@appknobs/react@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@appknobs/react/-/react-0.4.3.tgz#cb486c420d41d67e3edc776898628f7a66ce2b5a"
+  integrity sha512-CJDhM624Xv61f+bVkLY2dmQNsvIJbHYekkiksEudzJOhWFUMV/A9S7mCB3Hmc5cx7hjYNbotH5KXi2rFEOYRHA==
+  dependencies:
     react "^16.6.1"
     react-dom "^16.6.1"
-
-"@appknobs/services-client@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@appknobs/services-client/-/services-client-0.2.0.tgz#9dc60a038af7e6fed5ae2ddc0cc21767a4742300"
-  integrity sha512-JAGmrJTuY3hC8QZ7wWMNcsMeIbZ0payr1zOb8R2UTfSIVE5BGRM2uboA5OZoZ7iRZEn6htrJ0spffTnZntfl3g==
-  dependencies:
-    isomorphic-fetch "^2.2.1"
 
 "@babel/code-frame@^7.0.0":
   version "7.0.0"
@@ -1513,6 +1513,14 @@ create-react-class@^15.6.3:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
+cross-fetch@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.0.1.tgz#3f207bbd829a76e9aa2a953348bd1f2a3cf388a7"
+  integrity sha512-qWtpgBAF8ioqBOddRD+pHhrdzm/UWOArkrlIU7c08DlNbOxo5GfUbSY2vr90ZypWf0raW+HNN1F38pi5CEOjiQ==
+  dependencies:
+    node-fetch "2.3.0"
+    whatwg-fetch "3.0.0"
+
 cross-spawn@^5.0.1, cross-spawn@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
@@ -1696,12 +1704,19 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
+electron-fetch@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/electron-fetch/-/electron-fetch-1.3.0.tgz#00d9bb1fe7a66ddc3fea538910e01b26fee9abb5"
+  integrity sha512-WzHnWZqKdiCKHqqHu+GphezoWRSUVH6BQ/f13vu16VwYKJRZNt2dUrx40eZJcyZcDGn6RJDTAHS6jVoHoglgNw==
+  dependencies:
+    encoding "^0.1.12"
+
 encodeurl@~1.0.1, encodeurl@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
   integrity sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=
 
-encoding@^0.1.11:
+encoding@^0.1.11, encoding@^0.1.12:
   version "0.1.12"
   resolved "https://registry.yarnpkg.com/encoding/-/encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb"
   integrity sha1-U4tm8+5izRq1HsMjgp0flIDHS+s=
@@ -2750,7 +2765,7 @@ isobject@^3.0.0, isobject@^3.0.1:
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
-isomorphic-fetch@^2.1.1, isomorphic-fetch@^2.2.1:
+isomorphic-fetch@^2.1.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
   integrity sha1-YRrhrPFPXoH3KVB0coGf6XM1WKk=
@@ -4000,6 +4015,11 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
+node-fetch@2.3.0, node-fetch@^2.2.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.3.0.tgz#1a1d940bbfb916a1d3e0219f037e89e71f8c5fa5"
+  integrity sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==
+
 node-fetch@^1.0.1:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
@@ -4007,11 +4027,6 @@ node-fetch@^1.0.1:
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
-
-node-fetch@^2.2.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.3.0.tgz#1a1d940bbfb916a1d3e0219f037e89e71f8c5fa5"
-  integrity sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==
 
 node-int64@^0.4.0:
   version "0.4.0"
@@ -5862,7 +5877,7 @@ whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.3:
   dependencies:
     iconv-lite "0.4.24"
 
-whatwg-fetch@>=0.10.0:
+whatwg-fetch@3.0.0, whatwg-fetch@>=0.10.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
   integrity sha512-9GSJUgz1D4MfyKU7KRqwOjXCXTqWdFNvEr7eUBYchQiVc744mqK/MzXPNR2WsPkmkOa4ywfg8C2n8h+13Bey1Q==

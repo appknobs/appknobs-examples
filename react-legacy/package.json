@@ -7,12 +7,13 @@
     "start": "parcel index.html --open"
   },
   "dependencies": {
+    "@appknobs/client": "^0.4.2",
+    "@appknobs/react": "^0.4.3",
     "react": "15.0.0",
-    "react-dom": "15.0.0",
-    "@appknobs/react": "*",
-    "@appknobs/client": "*"
+    "react-dom": "15.0.0"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.10.3"
+    "parcel-bundler": "^1.10.3",
+    "typescript": "^3.3.3333"
   }
 }
