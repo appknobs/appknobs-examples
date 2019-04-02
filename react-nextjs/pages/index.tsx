@@ -65,6 +65,10 @@ class IndexPage extends React.Component<Props, State> {
     }
   }
 
+  public evaluatePayload = () => {
+    this.state.client.evaluate(this.state.payload)
+  }
+
   public render() {
     return (
       <>
@@ -98,6 +102,9 @@ class IndexPage extends React.Component<Props, State> {
               value={JSON.stringify(this.state.payload)}
               onChange={this.onPayloadChange}
             />
+            <div>
+              <button type="button" className="btn btn-primary" onClick={this.evaluatePayload}>Send</button>
+            </div>
           </div>
         </div>
       </>
