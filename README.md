@@ -37,7 +37,11 @@ You can register a user, create an app, grab the API key and set up features on 
 
 # Running examples
 
-## Client and server (SSR)
+## Angular
+
+An implementation of [@appknobs/angular](https://www.npmjs.com/package/@appknobs/angular) using Angular 7.
+
+## React client and server (SSR)
 
 This example uses Next.js to demonstrate both client-side and server-side rendering.
 
