@@ -5,7 +5,10 @@
 # Requirements
 
 You will need an Appknobs.io app ID, API key and a feature name for these examples to work.
-You can register for free at https://appknobs.io
+
+You can register a user, create an app, grab the API key and set up features on https://console.appknobs.io
+
+Read our quickstart guide for [Angular](https://appknobs.io/blog/adding-release-toggles-to-an-angular-app) or [React](https://appknobs.io/blog/implementing-release-toggles-with-react-and-cli) to get familiar with the basic concepts.
 
 # Setup
 
@@ -16,10 +19,10 @@ Add your
 * feature name
 * payload
 
-to `examples/config.js`:
+to `config.js`:
 
 ```
-cp examples/config.sample.js examples/config.js
+cp config.sample.js config.js
 ```
 
 so it looks something like this:
@@ -33,11 +36,30 @@ module.exports = {
 }
 ```
 
-You can register a user, create an app, grab the API key and set up features on https://console.appknobs.io
-
 # Running examples
 
-## Client and server (SSR)
+## Angular
+
+An implementation of [@appknobs/angular](https://www.npmjs.com/package/@appknobs/angular) using Angular 7.
+
+Note: you need to manually set the feature name in
+`angular/src/app/app.component.html` to the one you would add in `config.js`:
+
+```
+<ak-feature name='YOUR_FEATURE_NAME'>
+  <span>Very well, the feature is enabled 👏</span>
+</ak-feature>
+```
+
+To start the example on http://localhost:4200/ run:
+
+```
+cd angular
+npm install
+npm start
+```
+
+## React client and server (SSR)
 
 This example uses Next.js to demonstrate both client-side and server-side rendering.
 
